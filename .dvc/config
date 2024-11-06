@@ -1,0 +1,4 @@
+[core]
+    remote = remote-repository
+['remote "remote-repository"']
+    url = C:\Users\Bagas\OneDrive\Documents\College\KULIAH SEMESTER 5\Machine Learning Operation\Remote-Repository
