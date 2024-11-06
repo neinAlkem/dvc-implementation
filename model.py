@@ -2,7 +2,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, classification_report
 import joblib
 import json
@@ -22,7 +22,7 @@ X_train = scale.fit_transform(X_train)  # Fit and transform on training data
 X_test = scale.transform(X_test)        # Only transform on testing data
 
 # Model Training
-model = LogisticRegression()
+model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
 # Evaluate Model 
